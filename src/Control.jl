@@ -19,7 +19,7 @@ function calculate_transcriptional_control_array(t::Float64,x::Array{Float64,1},
     # TODO: write u-varible function here 
     W1 = exp(-E1/(R*T_K))
     W2 = exp(-E2/(R*T_K))
-    fI = (σ70^n)/(KD^n+σ70^n)
+    fI = ((σ70*10^-3)^n)/(KD^n+(σ70*10^-3)^n)
     u_variable = (W1+(W2*fI))/(1+W1+(fI*W2))
 
     # return -
